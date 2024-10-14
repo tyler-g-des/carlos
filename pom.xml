@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.bhd</groupId>
+    <artifactId>BHDL_AutomatizacionMigracionIBP</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <java.version>11</java.version>
+    </properties>
+
+
+
+    <dependencies>
+
+
+        <dependency>
+            <groupId>com.bhdleon.libraries</groupId>
+            <artifactId>BHD-AutomatizacionControladorSeleniumPOM</artifactId>
+            <version>1.0-2</version>
+        </dependency>
+
+<!--        <dependency>
+            <groupId>com.bhdleon.libraries</groupId>
+            <artifactId>BHD-AutomatizacionControladorSeleniumPOM</artifactId>
+            <version>BHDAutomation-pr139043-prd</version>
+        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>com.bhdleon.libraries</groupId>-->
+<!--            <artifactId>BHD-AutomatizacionControladorSeleniumPOM</artifactId>-->
+<!--            <version>1008463-$(env)</version>-->
+<!--        </dependency>-->
+
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.4.0</version>
+        </dependency>
+
+        <!--        Configuration.defaultConfiguration() jsonPath-->
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <version>2.6.0</version> <!-- Utiliza la versión más reciente disponible -->
+        </dependency>
+
+
+        <dependency> <!-- Manejo de Json -->
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.8</version>
+        </dependency>
+
+    </dependencies>
+
+
+
+    <!--    Agregado Final-->
+    <repositories>
+        <repository>
+            <id>bhdleon-maven</id>
+            <url>https://pkgs.dev.azure.com/bhdleon/_packaging/bhdleon-maven/maven/v1</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <distributionManagement>
+        <repository>
+            <id>bhdleon-maven</id>
+            <url>https://pkgs.dev.azure.com/bhdleon/_packaging/bhdleon-maven/maven/v1</url>
+        </repository>
+    </distributionManagement>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>ApiTesting.xml</suiteXmlFile>
+                        <suiteXmlFile>Demo.xml</suiteXmlFile>
+                        <suiteXmlFile>Regresion.xml</suiteXmlFile>
+                        <suiteXmlFile>HappyPass.xml</suiteXmlFile>
+                        <suiteXmlFile>Colletion de Pruebas.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <forceJavacCompilerUse>true</forceJavacCompilerUse>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,8 @@
+#Directories
+/Reports
+/src/main/pages/pakage
+/target
+/.idea
+
+#Files
+*.log

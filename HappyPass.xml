@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="IBP MIGRACION"  parallel="methods" thread-count="1">
+    <!--    thread-count="2" parallel="methods"-->
+<!--    <parameter name="emailTo" value="carlos_loyola@bhd.com.do" />-->
+<!--    <parameter name="emailTo" value="luis_rivera@bhd.com.do" />-->
+<!--    <parameter name="emailCc" value="fernando_pineda@bhd.com.do" />-->
+    <!--    <parameter name="browserName" value="DOCKER" />-->
+<!--    <parameter name="browserName" value="CHROME" />-->
+    <parameter name="browserName" value="EDGE" />
+<!--        <parameter name="browserName" value="FIREFOX" />-->
+
+<!--    <parameter name="headlessBrowser" value="true" />-->
+
+    <listeners>
+        <listener class-name="utils.SuiteListener"/>
+    </listeners>
+
+<!--    <test name="LOGIN">-->
+<!--        <classes>-->
+<!--            <class name="login.LoginTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="RESTAURAR CLAVE ACCESO">-->
+<!--        <classes>-->
+<!--            <class name="login.RestaurarClaveAccesoTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="VALIDACION DE ACCESO">-->
+<!--        <classes>-->
+<!--            <class name="pagetest.ValidacionAccesoTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="DASHBOARD">-->
+<!--        <classes>-->
+<!--            <class name="dashboard.DashboardTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="ACTUALIZAR DATOS">-->
+<!--        <classes>-->
+<!--            <class name="TestPerfilDeUsuario"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="CONFIGURACION - INFORMACION DE ACCESO Y SEGURIDAD">-->
+<!--        <classes>-->
+<!--            <class name="configuracion.TestInformacionDeAccesoSeguridad"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="BENEFICIARIOS INSCRITOS NACIONALES">-->
+<!--        <classes>-->
+<!--            <class name="pyt.beneficiariosinscritos.TestBeneficiariosNacionales"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="BENEFICIARIOS INSCRITOS INTERNACIONALES">-->
+<!--        <classes>-->
+<!--            <class name="pyt.beneficiariosinscritos.TestBeneficiariosInternacionales"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--        <test name="BENEFICIARIOS INSCRITOS PIN PESOS">-->
+<!--            <classes>-->
+<!--                <class name="pyt.beneficiariosinscritos.TestBeneficiariosPinPesos"/>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--    <test name="SERVICIOS INSCRITOS">-->
+<!--        <classes>-->
+<!--            <class name="accesos.serviciosinscritos.TestServiciosInscritos"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="TRANSFERENCIA ENTRE CUENTAS">-->
+<!--        <classes>-->
+<!--            <class name="transferencias.TransferenciaEntreCuentasTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="CONSULTAR CUENTA EN DASHBOARD">-->
+<!--        <classes>-->
+<!--            <class name="DetalleProductoTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+
+
+
+
+<!--    <test name="TRANSFERENCIAS ACH">-->
+<!--        <classes>-->
+<!--            <class name="transferencias.TransferenciaACHTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--        <test name="TRANSFERENCIA INTERNACIONAL">-->
+<!--            <classes>-->
+<!--                <class name="transferencias.TransferenciaInternacionalTest"/>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--        <test name="TRANSFERENCIA REGIONALES SIPA">-->
+<!--            <classes>-->
+<!--                <class name="transferencias.TransferenciaRegionalesSIPATest"/>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--        <test name="TRANSFERENCIA PIN PESOS">-->
+<!--            <classes>-->
+<!--                <class name="transferencias.TransferenciasPinPesosTest"/>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+
+            <test name="TRANSFERENCIA PIN PESOS">
+                <classes>
+                    <class name="PruebaTest"/>
+                </classes>
+            </test>
+
+</suite>

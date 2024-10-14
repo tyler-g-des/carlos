@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="IBP MIGRACION"  parallel="methods" thread-count="1">
+    <!--    thread-count="2" parallel="methods"-->
+        <parameter name="emailTo" value="carlos_loyola@bhd.com.do" />
+    <!--    <parameter name="emailTo" value="luis_rivera@bhd.com.do" />-->
+    <!--    <parameter name="emailCc" value="fernando_pineda@bhd.com.do" />-->
+    <!--    <parameter name="browserName" value="DOCKER" />-->
+<!--        <parameter name="browserName" value="CHROME" />-->
+        <parameter name="browserName" value="EDGE" />
+<!--    <parameter name="browserName" value="none" />-->
+    <!--        <parameter name="browserName" value="FIREFOX" />-->
+<!--            <parameter name="browserName" value="headless" />-->
+<!--        <parameter name="headlessBrowser" value="true" />-->
+        <parameter name="headlessBrowser" value="true" />
+
+    <listeners>
+        <listener class-name="utils.SuiteListener"/>
+    </listeners>
+
+<!--    <test name="LOGIN">-->
+<!--        <classes>-->
+<!--            <class name="apis.APILoginTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="DASHBOARD">-->
+<!--        <classes>-->
+<!--            <class name="apis.APIDashboardTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="DASHBOARD">
+        <classes>
+            <class name="PruebaTestAPI"/>
+        </classes>
+    </test>
+
+<!--    <test name="PERFIL DE USUARIO">-->
+<!--        <classes>-->
+<!--            <class name="apis.APIPerfilUsuarioTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="SERVICIOS INSCRITOS">-->
+<!--        <classes>-->
+<!--            <class name="apis.serviciosimpuestos.APIServiciosIncritosTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="SERVICIOS INSCRITOS">-->
+<!--        <classes>-->
+<!--            <class name="PruebaTestCuentas"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+
+<!--    <test name="TRANSFERENCIA PIN PESOS">-->
+<!--        <classes>-->
+<!--            <class name="transferencias.TransferenciasPinPesosTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="TRANSFERENCIA INTERNACIONAL">-->
+<!--        <classes>-->
+<!--            <class name="transferencias.TransferenciaInternacionalTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="TRANSFERENCIA REGIONALES SIPA">-->
+<!--        <classes>-->
+<!--            <class name="transferencias.TransferenciaRegionalesSIPATest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--        <test name="TRANSFERENCIAS ACH">-->
+<!--            <classes>-->
+<!--                <class name="transferencias.TransferenciaACHTest"/>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--    <test name="BENEFICIARIOS INSCRITOS NACIONALES">-->
+<!--        <classes>-->
+<!--            <class name="pyt.beneficiariosinscritos.TestBeneficiariosNacionales"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>

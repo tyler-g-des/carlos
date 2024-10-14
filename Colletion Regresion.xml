@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="IBP MIGRACION"  parallel="methods" thread-count="1">
+    <!--    thread-count="2" parallel="methods"-->
+    <parameter name="emailTo" value="carlos_loyola@bhd.com.do" />
+<!--    <parameter name="emailTo" value="luis_rivera@bhd.com.do" />-->
+<!--    <parameter name="emailCc" value="fernando_pineda@bhd.com.do" />-->
+    <!--    <parameter name="browserName" value="DOCKER" />-->
+<!--    <parameter name="browserName" value="CHROME" />-->
+<!--    <parameter name="browserName" value="EDGE" />-->
+        <parameter name="browserName" value="FIREFOX" />
+<!--         NO USAR FIREFOX-->
+    <parameter name="headlessBrowser" value="true" />
+
+    <parameter name="urlAmbiente" value="https://ibp-sqa.web.noprod.cfbhd.com/"></parameter>
+
+<!--    <parameter name="urlAmbiente" value="https://ibp.bhd.com.do/#/login"></parameter>-->
+
+    <listeners>
+        <listener class-name="utils.SuiteListener"/>
+    </listeners>
+
+
+    <test name="LOGIN">
+        <classes>
+            <class name="test2024.pagetest.login.TestLogin"/>
+        </classes>
+    </test>
+
+    <test name="LOGIN - RESTAURAR CONTRASEÑA">
+        <classes>
+            <class name="test2024.pagetest.login.TestForgotPasswordLogin"/>
+        </classes>
+    </test>
+
+    <test name="DASHBOARD">
+        <classes>
+            <class name="test2024.pagetest.TestDashborad"/>
+        </classes>
+    </test>
+
+<!--    <test name="CONFIGURACION - INFORMACION DE ACCESO Y SEGURIDAD">-->
+<!--        <classes>-->
+<!--            <class name="test2024.pagetest.configuracion.TestInformacionDeAccesoSeguridad"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="BENEFICIARIOS NACIONALES">
+        <classes>
+            <class name="test2024.pagetest.pagostransferencias.beneficiariosinscritos.TestBeneficiariosNacionalesBHD"/>
+        </classes>
+    </test>
+
+    <test name="BENEFICIARIOS INTERNACIONALES">
+        <classes>
+            <class name="test2024.pagetest.pagostransferencias.beneficiariosinscritos.TestBeneficiariosInternacionales"/>
+        </classes>
+    </test>
+
+    <test name="BENEFICIARIOS PIN PESOS">
+        <classes>
+            <class name="test2024.pagetest.pagostransferencias.beneficiariosinscritos.TestBeneficiariosPinPesos"/>
+        </classes>
+    </test>
+
+    <test name="SERVICIOS INSCRITOS">
+        <classes>
+            <class name="test2024.pagetest.pagostransferencias.accesos.TestServiciosInscritos"/>
+        </classes>
+    </test>
+
+
+
+
+    <test name="TRANSACCIONES ENTRE CUENTAS PROPIAS">
+        <classes>
+            <class name="test2024.pagetest.pagostransferencias.transferenciasentremisproductos.TestTransferenciasEntreCuentas"/>
+        </classes>
+    </test>
+
+    <test name="PAGO DE PRESTAMOS PROPIOS">
+        <classes>
+            <class name="test2024.pagetest.pagostransferencias.transferenciasentremisproductos.TestPagoPrestamoPropio"/>
+        </classes>
+    </test>
+
+    <test name="AVANCE DE EFECTIVO DE TARJETA DE CREDITO">
+        <classes>
+            <class name="test2024.pagetest.pagostransferencias.transferenciasentremisproductos.TestAvanceEfectivoTCACuenta"/>
+        </classes>
+    </test>
+
+
+
+    <test name="TRANSACCION A TERCEROS BHD">
+        <classes>
+            <class name="test2024.pagetest.pagostransferencias.bhdotrosbancos.TestTransferenciasATerceroEnBHD"/>
+        </classes>
+    </test>
+
+
+
+    <test name="TRANSFERENCIAS REGIONALES SIPA">
+        <classes>
+            <class name="test2024.pagetest.pagostransferencias.TestTransferenciasRegionalesSIPA"/>
+        </classes>
+    </test>
+
+
+
+    <test name="TRANSFERENCIAS PIN PESOS">
+        <classes>
+            <class name="test2024.pagetest.pagostransferencias.pinpesos.TestTransferenciasPinPesos"/>
+        </classes>
+    </test>
+
+
+
+
+
+</suite>

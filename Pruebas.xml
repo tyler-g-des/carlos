@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="IBP MIGRACION"  parallel="methods" thread-count="1">
+    <!--    thread-count="2" parallel="methods"-->
+<!--    <parameter name="emailTo" value="carlos_loyola@bhd.com.do" />-->
+<!--    <parameter name="emailTo" value="luis_rivera@bhd.com.do" />-->
+<!--    <parameter name="emailCc" value="fernando_pineda@bhd.com.do" />-->
+    <!--    <parameter name="browserName" value="DOCKER" />-->
+<!--    <parameter name="browserName" value="CHROME" />-->
+<!--    <parameter name="browserName" value="EDGE" />-->
+        <parameter name="browserName" value="FIREFOX" />
+<!--         NO USAR FIREFOX-->
+<!--    <parameter name="headlessBrowser" value="true" />-->
+
+    <parameter name="urlAmbiente" value="https://ibp-sqa.web.noprod.cfbhd.com/"></parameter>
+
+<!--    <parameter name="urlAmbiente" value="https://ibp.bhd.com.do/#/login"></parameter>-->
+
+    <listeners>
+        <listener class-name="utils.SuiteListener"/>
+    </listeners>
+
+
+<!--    <test name="Colletion para prueba de Test Cases">-->
+<!--        <classes>-->
+<!--            <class name="login.LoginTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="CLASE DE PRUEBA">-->
+
+<!--        <classes>-->
+<!--&lt;!&ndash;                        <class name="PruebaTest"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="configuracion.InformacionAccesoSeguridadTest"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="accesos.TransaccionesFavoritasTest"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="dashboard.DashboardTest"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="accesos.beneficiariosincritos.PantallaBeneficiariosPinPesosTest"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="PruebaTest"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="login.RestaurarClaveAccesoTest"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="accesos.ServiciosInscritosTest"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="login.LoginTest"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name=""></class>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="validacionesacceso.ValidacionAccesoTest"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <class name="login.ConfiguracionAccesoTest"></class>&ndash;&gt;-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="ACTUALIZAR DATOS">-->
+<!--        <classes>-->
+<!--            <class name="TestPerfilDeUsuario"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="RESTAURAR CLAVE ACCESO">-->
+<!--        <classes>-->
+<!--            <class name="login.RestaurarClaveAccesoTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="DASHBOARD">-->
+<!--        <classes>-->
+<!--            <class name="dashboard.DashboardTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="BENEFICIARIOS INSCRITOS NACIONALES">-->
+<!--        <classes>-->
+<!--            <class name="pyt.beneficiariosinscritos.TestBeneficiariosNacionales"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="BENEFICIARIOS INSCRITOS INTERNACIONALES">-->
+<!--        <classes>-->
+<!--            <class name="pyt.beneficiariosinscritos.TestBeneficiariosInternacionales"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="pruebas de regresion">-->
+<!--        <parameter name="urlAmbiente" value="https://ibp.bhd.com.do/#/login"></parameter>-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="regresion"></include>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="PruebaTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test name="SERVICIOS INSCRITOS">-->
+<!--        <classes>-->
+<!--            <class name="accesos.serviciosinscritos.TestServiciosInscritos"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="TRANSFERENCIAS PIN PESOS">-->
+<!--        <classes>-->
+<!--            <class name="PruebaTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="PAGO AL INSTANTE">-->
+<!--        <classes>-->
+<!--            <class name="transferenciasATercero.TePagoInstanteLBTR"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+        <test name="PRUEBA API LOGIN">
+            <classes>
+                <class name="PruebaTestAPI"/>
+            </classes>
+        </test>
+
+</suite>

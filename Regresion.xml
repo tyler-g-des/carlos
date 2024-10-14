@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="IBP MIGRACION"  parallel="methods" thread-count="1">
+    <!--    thread-count="2" parallel="methods"-->
+<!--    <parameter name="emailTo" value="carlos_loyola@bhd.com.do" />-->
+<!--    <parameter name="emailTo" value="luis_rivera@bhd.com.do" />-->
+<!--    <parameter name="emailCc" value="fernando_pineda@bhd.com.do" />-->
+    <!--    <parameter name="browserName" value="DOCKER" />-->
+<!--        <parameter name="browserName" value="CHROME" />-->
+<!--        <parameter name="browserName" value="FIREFOX" />-->
+    <parameter name="browserName" value="EDGE" />
+<!--    <parameter name="headlessBrowser" value="true" />-->
+    <listeners>
+        <listener class-name="utils.SuiteListener"/>
+    </listeners>
+
+
+
+</suite>
